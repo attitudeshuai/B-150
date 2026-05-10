@@ -66,7 +66,7 @@ export const getUsers = async (_req: Request, res: Response, next: NextFunction)
 export const getUserById = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const user = await userService.getUserById(parseInt(id, 10));
+        const user = await userService.getUserById(parseInt(id, 8));
 
         res.json({
             success: true,
